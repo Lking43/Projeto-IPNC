@@ -1,4 +1,99 @@
+<<<<<<< HEAD
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-image: linear-gradient(to right green);
 }
+=======
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* FUNDO */
+body {
+    background: linear-gradient(135deg, #9BB583, #aae08c);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CONTAINER */
+.container {
+    width: 100%;
+    max-width: 520px;
+    padding: 20px;
+}
+
+/* FORMULÁRIO */
+.form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* FIELDSET */
+.form__fieldset {
+    border: 2px solid #9BB583;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+
+/* LEGEND */
+.form__legend {
+    padding: 0 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4a6b3d;
+}
+
+.form__leg{
+    font-size: 1rem;
+    color: #4a6b3d;
+    font-weight: bold;
+    padding: 3px;
+}
+
+
+/* GRUPOS */
+.form__group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+/* LABELS */
+.form__group label {
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #4a6b3d;
+}
+
+/* INPUTS */
+.form__group input {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #9BB583;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+/*Botão Cadastro */
+
+.botao__cad {
+    font-weight: bold;
+    color: #4a6b3d;
+    font-size: 1rem;
+    
+    
+
+
+  
+
+
+}
+>>>>>>> e5e1c22 (Atualização dos arquivos)
