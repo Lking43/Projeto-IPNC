@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: linear-gradient(to right green);
-}
-=======
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -11,89 +6,185 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* FUNDO */
+/* FUNDO INSTITUCIONAL */
 body {
-    background: linear-gradient(135deg, #9BB583, #aae08c);
     min-height: 100vh;
+
+    background: 
+        linear-gradient(rgba(95,127,85,0.30), rgba(143,170,121,0.90)),
+        url("logo.jpg") center/cover no-repeat;
+
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
-/* CONTAINER */
-.container {
-    width: 100%;
-    max-width: 520px;
-    padding: 20px;
-}
+
 
 /* FORMULÁRIO */
-.form {
-    background-color: #ffffff;
+.container {
+    width: 100%;
+    max-width: 340px;
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+    position: relative;
+    overflow: hidden;
+
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.2);
+
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
 }
 
-/* FIELDSET */
-.form__fieldset {
-    border: 2px solid #9BB583;
-    border-radius: 8px;
-    padding: 20px;
+/* LOGO COMO MARCA D'ÁGUA */
+.container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: url("logo.png") no-repeat center center;
+    background-size: 75%;
+    opacity: 0.20;
+    z-index: 50;
+}
+/* CONTEÚDO */
+.container form {
+    position: relative;
+    z-index: 1;
+    
+}
+
+/* TÍTULO */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1f2e1f;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.form__title {
+    margin-bottom: 18px;
+    text-align: center;
+    color: #1f2e1f;
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
 
-/* LEGEND */
-.form__legend {
-    padding: 0 10px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #4a6b3d;
+/* LABEL */
+label {
+    color: #3f4f3d;
+    font-size: 13px;
 }
 
-.form__leg{
-    font-size: 1rem;
-    color: #4a6b3d;
-    font-weight: bold;
-    padding: 3px;
-}
+/* INPUT */
+input {
+    width: 100%;
+    padding: 9px;
+    margin: 6px 0 14px;
 
-
-/* GRUPOS */
-.form__group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 16px;
-}
-
-/* LABELS */
-.form__group label {
-    margin-bottom: 6px;
-    font-weight: 600;
-    color: #4a6b3d;
-}
-
-/* INPUTS */
-.form__group input {
-    padding: 10px;
+    background: rgba(255,255,255,0.4);
+    border: 1px solid rgba(0,0,0,0.1);
     border-radius: 6px;
-    border: 1px solid #9BB583;
-    font-size: 0.95rem;
-    transition: 0.3s;
+    outline: none;
+    color: #2f3e2e;
+
+    transition: 0.2s;
 }
 
-/*Botão Cadastro */
+input::placeholder {
+    color: #6f776b;
+}
 
-.botao__cad {
+input:focus {
+    border: 1px solid #63c132;
+    background: rgba(255,255,255,0.7);
+}
+
+/* FOCO */
+input:focus {
+    border: 1px solid #63c132;
+    background: rgba(255,255,255,0.18);
+}
+
+/* RADIO */
+input[type="radio"] {
+    width: auto;
+    margin-right: 3px;
+}
+
+.radio-group {
+    margin-bottom: 10px;
+}
+
+.radio-group p {
+    font-size: 13px;
+    margin-bottom: 5px;
+    color: #3f4f3d;
+}
+
+.radio-group label {
+    font-size: 13px;
+    margin-right: 50px;
+}
+
+/* BOTÃO */
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+
+    background: #4f6f45;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
     font-weight: bold;
-    color: #4a6b3d;
-    font-size: 1rem;
-    
-    
 
-
-  
-
-
+    transition: 0.3s ease;
 }
->>>>>>> e5e1c22 (Atualização dos arquivos)
+
+button:hover {
+    background: #63c132;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* LOGOS FIXAS NO CANTO */
+.logos {
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    z-index: 999;
+}
+
+.logos img {
+    width: 70px;
+    height: auto;
+    opacity: 0.8;
+    transition: 0.3s ease;
+}
+
+.logos img:hover {
+    opacity: 1;
+    transform: scale(1.08);
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .logos img {
+        width: 45px;
+    }
+}
